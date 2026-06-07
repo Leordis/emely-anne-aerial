@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initParallax();
   initHeroVideo();
+  initCustomCursor();
 });
 
 /* ====================================================
@@ -424,6 +425,7 @@ function initParallax() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   const heroContent = $('.hero__content');
+  const heroMedia = $('.hero__media');
   if (!heroContent) return;
 
   let ticking = false;
@@ -435,9 +437,17 @@ function initParallax() {
         const heroHeight = document.getElementById('hero')?.offsetHeight || 0;
 
         if (scrollY < heroHeight) {
-          const offset = scrollY * 0.25;
-          heroContent.style.transform = `translateY(${offset}px)`;
-          heroContent.style.opacity = 1 - (scrollY / (heroHeight * 0.7));
+          // Content Parallax (moves up slower, fades out)
+          const offsetContent = scrollY * 0.25;
+          heroContent.style.transform = `translateY(${offsetContent}px)`;
+          heroContent.style.opacity = 1 - (scrollY / (heroHeight * 0.75));
+
+          // Background Video/Image Parallax (moves down slower, scales up slightly)
+          if (heroMedia) {
+            const offsetMedia = scrollY * 0.35;
+            const scale = 1 + (scrollY / heroHeight) * 0.08;
+            heroMedia.style.transform = `translateY(${offsetMedia}px) scale(${scale})`;
+          }
         }
         ticking = false;
       });
@@ -717,3 +727,104 @@ function initHeroVideo() {
     video.load();
   });
 })();
+
+/* ====================================================
+   CUSTOM LUXURY CURSOR
+   ==================================================== */
+function initCustomCursor() {
+  // Check if hover is supported and motion is not reduced
+  if (window.matchMedia('(hover: none)').matches || 
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const cursor = document.createElement('div');
+  const follower = document.createElement('div');
+  cursor.className = 'custom-cursor';
+  follower.className = 'custom-cursor-follower';
+  document.body.appendChild(cursor);
+  document.body.appendChild(follower);
+
+  // Add safety class to hide default cursor
+  document.body.classList.add('has-custom-cursor');
+
+  let mouseX = 0, mouseY = 0;
+  let followerX = 0, followerY = 0;
+
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    
+    // Dot instantly follows
+    cursor.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+  }, { passive: true });
+
+  // Smooth lag for the follower circle
+  const speed = 0.15; // interpolation factor
+  const tick = () => {
+    followerX += (mouseX - followerX) * speed;
+    followerY += (mouseY - followerY) * speed;
+    
+    follower.style.transform = `translate3d(${followerX}px, ${followerY}px, 0) translate(-50%, -50%)`;
+    requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+
+  // Hover states for interactive elements
+  const updateInteractives = () => {
+    const interactives = $$('a, button, input, select, textarea, [role="button"], .faq-q, .test-btn, .test-dot');
+    
+    interactives.forEach(el => {
+      // Prevent double binding
+      if (el.dataset.hasCursorEvents) return;
+      el.dataset.hasCursorEvents = 'true';
+
+      el.addEventListener('mouseenter', () => {
+        document.body.classList.add('cursor-hover');
+      });
+      el.addEventListener('mouseleave', () => {
+        document.body.classList.remove('cursor-hover');
+      });
+    });
+  };
+
+  updateInteractives();
+
+  // Re-run for dynamic elements if any (like accordion expands, form success etc.)
+  const observer = new MutationObserver(updateInteractives);
+  observer.observe(document.body, { childList: true, subtree: true });
+
+  // Special hover state for showcase video
+  const videoPlayer = $('.video-player');
+  if (videoPlayer) {
+    videoPlayer.addEventListener('mouseenter', () => {
+      document.body.classList.add('cursor-video');
+      follower.textContent = 'PLAY';
+    });
+    videoPlayer.addEventListener('mouseleave', () => {
+      document.body.classList.remove('cursor-video');
+      follower.textContent = '';
+    });
+  }
+
+  // Special hover state for gallery items
+  const galleryItems = $$('.gallery-item__inner');
+  galleryItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      document.body.classList.add('cursor-gallery');
+      follower.textContent = 'VIEW';
+    });
+    item.addEventListener('mouseleave', () => {
+      document.body.classList.remove('cursor-gallery');
+      follower.textContent = '';
+    });
+  });
+
+  // Hide cursor when leaving window
+  document.addEventListener('mouseleave', () => {
+    cursor.style.opacity = '0';
+    follower.style.opacity = '0';
+  });
+  document.addEventListener('mouseenter', () => {
+    cursor.style.opacity = '1';
+    follower.style.opacity = '1';
+  });
+}
