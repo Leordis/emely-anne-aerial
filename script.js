@@ -69,7 +69,7 @@ function initNav() {
   // Close on outside click
   document.addEventListener('click', (e) => {
     if (links.classList.contains('mobile-open') &&
-        !nav.contains(e.target)) {
+      !nav.contains(e.target)) {
       links.classList.remove('mobile-open');
       toggle.classList.remove('active');
       toggle.setAttribute('aria-expanded', 'false');
@@ -454,28 +454,79 @@ function initHeroVideo() {
   const fallback = $('.hero__image-fallback');
   if (!video || !fallback) return;
 
-  // Show fallback if no video source or video fails
+  // Force muted, playsinline, and autoplay properties in JS for mobile Safari/Chrome compatibility
+  video.muted = true;
+  video.defaultMuted = true;
+  video.playsInline = true;
+  video.setAttribute('muted', '');
+  video.setAttribute('playsinline', '');
+
   const sources = $$('source', video);
   const hasSrc = video.src || sources.some(s => s.src);
 
   if (!hasSrc) {
     video.style.display = 'none';
     fallback.style.zIndex = '0';
+    return;
   }
 
+  // Handle video error gracefully (only hide if all sources failed)
   video.addEventListener('error', () => {
-    video.style.display = 'none';
-    fallback.style.zIndex = '0';
+    if (video.networkState === HTMLMediaElement.NETWORK_NO_SOURCE) {
+      console.warn("Hero video failed to load: all sources exhausted.");
+      video.style.display = 'none';
+      fallback.style.zIndex = '0';
+    }
   });
 
-  // Pause video when not in viewport (battery/performance)
+  // Safe play function with interaction fallback
+  const playVideo = () => {
+    video.muted = true;
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(error => {
+        console.log("Hero video autoplay prevented. Will play on first user interaction.", error);
+
+        const playOnInteraction = () => {
+          video.muted = true;
+          video.play().then(() => {
+            cleanupInteraction();
+          }).catch(err => {
+            console.log("Interactive play attempt failed:", err);
+          });
+        };
+
+        const cleanupInteraction = () => {
+          document.removeEventListener('click', playOnInteraction);
+          document.removeEventListener('touchstart', playOnInteraction);
+          document.removeEventListener('keydown', playOnInteraction);
+          window.removeEventListener('scroll', playOnInteraction);
+        };
+
+        document.addEventListener('click', playOnInteraction, { once: true, passive: true });
+        document.addEventListener('touchstart', playOnInteraction, { once: true, passive: true });
+        document.addEventListener('keydown', playOnInteraction, { once: true, passive: true });
+        window.addEventListener('scroll', playOnInteraction, { once: true, passive: true });
+      });
+    }
+  };
+
+  // Try to play immediately
+  playVideo();
+
+  // Pause video when not in viewport, play when returned (battery/performance)
+  // We track the first observer run to avoid pausing on load if layout isn't settled
+  let isFirstRun = true;
   const videoObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        video.play().catch(() => {});
+        playVideo();
       } else {
-        video.pause();
+        if (!isFirstRun && !video.paused) {
+          video.pause();
+        }
       }
+      isFirstRun = false;
     });
   }, { threshold: 0.1 });
 
