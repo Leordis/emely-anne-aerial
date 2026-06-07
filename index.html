@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emily Anne — Aerial · Dance · Live Performance | Orlando, FL</title>
+  <meta name="description"
+    content="Emily Anne is a professional aerial artist, dancer, and live performer based in Orlando, Florida. Available for corporate events, weddings, and private celebrations throughout Central Florida and beyond." />
+  <meta name="keywords"
+    content="aerial performer Orlando, aerial hoop Orlando, dance performer Orlando, wedding entertainment Orlando, corporate event performer Florida, aerial silks Orlando, live entertainment Orlando" />
+  <meta property="og:title" content="Emily Anne — Aerial · Dance · Live Performance" />
+  <meta property="og:description"
+    content="The performance your event will never forget. Aerial, dance, and live entertainment for corporate events, weddings, and private celebrations in Orlando, FL." />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo" aria-label="Emily Anne — Home">
+        <span class="nav__logo-name">Emily Anne</span>
+        <span class="nav__logo-tag">Aerial · Dance · Live Performance</span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks" role="list">
+        <li><a href="#performances" class="nav__link">Performances</a></li>
+        <li><a href="#corporate" class="nav__link">Corporate</a></li>
+        <li><a href="#weddings" class="nav__link">Weddings</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#gallery" class="nav__link">Gallery</a></li>
+        <li><a href="#booking" class="nav__link nav__link--cta">Book Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero" aria-label="Hero">
+    <div class="hero__media">
+      <video class="hero__video" autoplay muted loop playsinline poster="assets/images/photo_6.png" aria-hidden="true">
+        <source src="videos/hero_video.mp4" type="video/mp4" />
+        <source src="assets/videos/hero_video.mp4" type="video/mp4" />
+      </video>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <!-- Fallback cinematic image if video not present -->
+      <div class="hero__image-fallback" aria-hidden="true" style="background-image:url('assets/images/photo_6.png')">
+      </div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__eyebrow reveal">ORLANDO · CENTRAL FLORIDA · AVAILABLE WORLDWIDE</p>
+      <h1 class="hero__headline reveal reveal--delay-1">
+        The Performance<br />
+        <em>Your Event</em><br />
+        Will Never Forget.
+      </h1>
+      <p class="hero__subheadline reveal reveal--delay-2">
+        Aerial performance, dance, and live entertainment<br class="br-desktop" />
+        for corporate events, weddings, and private celebrations.
+      </p>
+      <div class="hero__actions reveal reveal--delay-3">
+        <a href="#booking" class="btn btn--primary">Book Your Date <span aria-hidden="true">→</span></a>
+        <a href="#video" class="btn btn--ghost">Watch the Reel <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero__badges reveal reveal--delay-4" aria-label="Disciplines">
+        <span>✦ Aerial Hoop & Silks</span>
+        <span>✦ Contemporary Dance</span>
+        <span>✦ Custom Performances</span>
+        <span>✦ Fully Insured</span>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true">
+      <span class="hero__scroll-line"></span>
+    </div>
+  </section>
+
+  <!-- ===== VIDEO ===== -->
+  <section class="video-section" id="video" aria-labelledby="video-heading">
+    <div class="container">
+      <div class="section-label section-label--gold">THE WORK</div>
+      <h2 class="section-heading reveal" id="video-heading">
+        <em>See What Your Event<br />Could Feel Like.</em>
+      </h2>
+      <p class="section-sub reveal">Sixty seconds. Every discipline. Zero filters.</p>
+      <div class="video-wrapper reveal">
+        <div class="video-player" role="region" aria-label="Performance demo reel">
+          <video id="showcaseVideo" poster="assets/images/photo_5.png" playsinline preload="metadata" aria-label="Emily Anne Performance Showcase Video">
+            <source src="videos/hero_video.mp4" type="video/mp4" />
+            <source src="assets/videos/hero_video.mp4" type="video/mp4" />
+          </video>
+          <div class="video-player__overlay">
+            <button class="video-player__play-btn" aria-label="Play performance showcase">
+              <svg viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="video-caption">
+          <p><em>Every performance is custom-designed.<br />The one you're imagining right now is possible.</em></p>
+        </div>
+      </div>
+      <div class="video-disciplines" aria-label="Performance disciplines">
+        <div class="discipline-card reveal">
+          <span class="discipline-icon" aria-hidden="true">✦</span>
+          <span class="discipline-name">Aerial Performance</span>
+        </div>
+        <div class="discipline-card reveal reveal--delay-1">
+          <span class="discipline-icon" aria-hidden="true">✦</span>
+          <span class="discipline-name">Dance & Movement</span>
+        </div>
+        <div class="discipline-card reveal reveal--delay-2">
+          <span class="discipline-icon" aria-hidden="true">✦</span>
+          <span class="discipline-name">Custom Experiences</span>
+        </div>
+      </div>
+      <div class="section-cta">
+        <a href="#booking" class="btn btn--primary">Your Event Deserves This <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PERFORMANCES OVERVIEW ===== -->
+  <section class="performances" id="performances" aria-labelledby="perf-heading">
+    <div class="container">
+      <div class="section-label section-label--light">WHAT EMILY DOES</div>
+      <h2 class="section-heading section-heading--light reveal" id="perf-heading">
+        One Artist.<br />Every Discipline.<br /><em>Any Event.</em>
+      </h2>
+      <p class="section-sub section-sub--light reveal">
+        From aerial hoop suspended above your guests to an intimate dance piece that silences the room —<br
+          class="br-desktop" />
+        Emily brings technical mastery and genuine artistry to every performance, every time.
+      </p>
+      <div class="perf-grid">
+        <article class="perf-card reveal" aria-labelledby="perf-aerial">
+          <div class="perf-card__image" style="background-image:url('assets/images/photo_5.png')" role="img"
+            aria-label="Aerial performance"></div>
+          <div class="perf-card__body">
+            <span class="perf-card__eyebrow">SIGNATURE SERVICE</span>
+            <h3 class="perf-card__title" id="perf-aerial">Aerial Performance</h3>
+            <p class="perf-card__text">Hoop and silks. The discipline that turns a venue into a theater and every guest
+              into an audience.</p>
+            <a href="#aerial" class="perf-card__link">Explore Aerial <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="perf-card reveal reveal--delay-1" aria-labelledby="perf-dance">
+          <div class="perf-card__image" style="background-image:url('assets/images/photo_2.png')" role="img"
+            aria-label="Dance performance"></div>
+          <div class="perf-card__body">
+            <span class="perf-card__eyebrow">HIGH ENERGY</span>
+            <h3 class="perf-card__title" id="perf-dance">Dance Performance</h3>
+            <p class="perf-card__text">Contemporary, commercial, theatrical. Movement that reads in the front row and
+              the back of the room.</p>
+            <a href="#dance-perf" class="perf-card__link">Explore Dance <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="perf-card reveal reveal--delay-2" aria-labelledby="perf-corp">
+          <div class="perf-card__image" style="background-image:url('assets/images/photo_7.png')" role="img"
+            aria-label="Corporate event"></div>
+          <div class="perf-card__body">
+            <span class="perf-card__eyebrow">CORPORATE & BRAND</span>
+            <h3 class="perf-card__title" id="perf-corp">Corporate Events</h3>
+            <p class="perf-card__text">Brand activations, galas, grand openings. The performance that makes your event
+              the benchmark.</p>
+            <a href="#corporate" class="perf-card__link">Explore Corporate <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="perf-card reveal reveal--delay-3" aria-labelledby="perf-wed">
+          <div class="perf-card__image" style="background-image:url('assets/images/photo_6.png')" role="img"
+            aria-label="Wedding performance"></div>
+          <div class="perf-card__body">
+            <span class="perf-card__eyebrow">WEDDINGS & PRIVATE</span>
+            <h3 class="perf-card__title" id="perf-wed">Weddings & Private Events</h3>
+            <p class="perf-card__text">The moment your guests are still talking about at your fifth anniversary.</p>
+            <a href="#weddings" class="perf-card__link">Explore Weddings <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AERIAL DETAIL ===== -->
+  <section class="service-detail" id="aerial" aria-labelledby="aerial-heading">
+    <div class="service-detail__visual" role="img" aria-label="Emily Anne aerial hoop performance"
+      style="background-image:url('assets/images/photo_5.png')"></div>
+    <div class="service-detail__content">
+      <div class="section-label section-label--gold">AERIAL PERFORMANCE</div>
+      <h2 class="service-detail__heading reveal" id="aerial-heading">
+        <em>When She Leaves the Ground,<br />the Room Holds Its Breath.</em>
+      </h2>
+      <p class="service-detail__text reveal">
+        Aerial hoop. Aerial silks. Two disciplines, one artist, infinite possibilities. Emily's aerial work is built on
+        years of technical training and stage performance — the kind of precision that makes the impossible look
+        effortless.
+      </p>
+      <div class="service-detail__split">
+        <div class="service-detail__item reveal">
+          <h4>Aerial Hoop (Lyra)</h4>
+          <p>The steel hoop suspended above your guests. A discipline that combines the grace of ballet with the
+            strength of an acrobat. Performable indoors or outdoors, at intimate dinners or grand galas. The visual that
+            gets shared from your event.</p>
+        </div>
+        <div class="service-detail__item reveal reveal--delay-1">
+          <h4>Aerial Silks</h4>
+          <p>Two lengths of fabric, floor to rigging, wrapped around a performer who moves through them like water.
+            Aerial silks create atmosphere as much as spectacle — the right lighting, the right music, the right artist
+            transform any venue into something cinematic.</p>
+        </div>
+      </div>
+      <p class="service-detail__note reveal">
+        A rigging point rated for appropriate load is required. Emily provides a complete technical rider upon booking.
+        Most professional venues in Orlando and Central Florida are fully compatible.
+      </p>
+      <a href="#booking" class="btn btn--primary reveal">Book an Aerial Performance <span
+          aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <!-- ===== DANCE DETAIL ===== -->
+  <section class="service-detail service-detail--reverse" id="dance-perf" aria-labelledby="dance-heading">
+    <div class="service-detail__visual" role="img" aria-label="Emily Anne dance performance"
+      style="background-image:url('assets/images/photo_2.png')"></div>
+    <div class="service-detail__content">
+      <div class="section-label section-label--gold">DANCE PERFORMANCE</div>
+      <h2 class="service-detail__heading reveal" id="dance-heading">
+        Movement That Reads<br /><em>From Every Seat in the Room.</em>
+      </h2>
+      <p class="service-detail__text reveal">
+        Contemporary, commercial, theatrical — Emily's dance work is precision movement designed for your stage and your
+        crowd. Built for the moment that stops conversation and turns every face toward the floor.
+      </p>
+      <div class="service-detail__split">
+        <div class="service-detail__item reveal">
+          <h4>Contemporary & Theatrical</h4>
+          <p>Emotionally charged, technically precise movement that tells a story without words. Perfect for gala
+            performances, ceremony moments, and events where atmosphere matters as much as spectacle.</p>
+        </div>
+        <div class="service-detail__item reveal reveal--delay-1">
+          <h4>Commercial & High Energy</h4>
+          <p>Explosive, crowd-engaging movement designed to ignite the room. Brand activations, launch parties, and
+            events where you need every guest on their feet and every phone in the air.</p>
+        </div>
+      </div>
+      <a href="#booking" class="btn btn--primary reveal">Book a Dance Performance <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <!-- ===== CORPORATE ===== -->
+  <section class="corporate" id="corporate" aria-labelledby="corp-heading">
+    <div class="container">
+      <div class="section-label">CORPORATE & BRAND EVENTS</div>
+      <h2 class="section-heading reveal" id="corp-heading">
+        Your Brand Has One Night<br />to Make a Lasting Impression.<br /><em>Don't Leave It to a DJ.</em>
+      </h2>
+      <p class="section-sub reveal">
+        Corporate entertainment done right — seamless, stunning, and tailored to your brand. The performance that
+        becomes the highlight reel of your event.
+      </p>
+      <div class="corp-grid">
+        <article class="corp-card reveal" aria-labelledby="corp-brand">
+          <div class="corp-card__number" aria-hidden="true">01</div>
+          <h3 class="corp-card__title" id="corp-brand">Brand Activations & Product Launches</h3>
+          <p class="corp-card__text">Custom performances built around your brand identity — color palette, message,
+            aesthetic — that become the visual centerpiece of your launch. The content your marketing team actually
+            wants to post.</p>
+        </article>
+        <article class="corp-card reveal reveal--delay-1" aria-labelledby="corp-gala">
+          <div class="corp-card__number" aria-hidden="true">02</div>
+          <h3 class="corp-card__title" id="corp-gala">Galas & Award Ceremonies</h3>
+          <p class="corp-card__text">Elegant, sophisticated entertainment that elevates the atmosphere. An ambient
+            aerial set during cocktail hour. A full showpiece before the award presentation. A moment of genuine
+            artistry where usually there is only background music.</p>
+        </article>
+        <article class="corp-card reveal reveal--delay-2" aria-labelledby="corp-opening">
+          <div class="corp-card__number" aria-hidden="true">03</div>
+          <h3 class="corp-card__title" id="corp-opening">Grand Openings & Corporate Parties</h3>
+          <p class="corp-card__text">First impressions are permanent. A grand opening performance creates foot traffic,
+            generates social content, and signals to everyone present that this brand takes experience seriously.</p>
+        </article>
+      </div>
+      <div class="corp-guarantees reveal" role="list" aria-label="Professional guarantees">
+        <div class="corp-guarantee" role="listitem">
+          <span class="corp-guarantee__icon" aria-hidden="true">✦</span>
+          <span>Fully Insured & Certified</span>
+        </div>
+        <div class="corp-guarantee" role="listitem">
+          <span class="corp-guarantee__icon" aria-hidden="true">✦</span>
+          <span>Complete Technical Rider Provided</span>
+        </div>
+        <div class="corp-guarantee" role="listitem">
+          <span class="corp-guarantee__icon" aria-hidden="true">✦</span>
+          <span>Custom Themed to Your Brand</span>
+        </div>
+        <div class="corp-guarantee" role="listitem">
+          <span class="corp-guarantee__icon" aria-hidden="true">✦</span>
+          <span>Available Throughout Florida</span>
+        </div>
+      </div>
+      <blockquote class="corp-quote reveal">
+        <p><em>"The return on investment for a performance people remember is incalculable.<br class="br-desktop" />The
+            cost of an event nobody mentions again is not."</em></p>
+      </blockquote>
+      <div class="section-cta">
+        <a href="#booking" class="btn btn--dark">Request a Corporate Quote <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WEDDINGS ===== -->
+  <section class="weddings" id="weddings" aria-labelledby="wed-heading">
+    <div class="weddings__visual" role="img" aria-label="Emily Anne aerial silks performance at wedding"
+      style="background-image:url('assets/images/photo_6.png')">
+      <div class="weddings__overlay" aria-hidden="true"></div>
+    </div>
+    <div class="weddings__content">
+      <div class="section-label section-label--gold">WEDDINGS</div>
+      <h2 class="weddings__heading reveal" id="wed-heading">
+        <em>The Moment Your Guests<br />Are Still Talking About<br />at Your Fifth Anniversary.</em>
+      </h2>
+      <p class="weddings__text reveal">
+        Your wedding is planned down to every petal and every seam. And somewhere in that planning, there is a moment —
+        a single unrepeatable moment — that will be the one everyone remembers. Not the flowers. Not the dress. The
+        moment Emily takes the aerial rig above your guests and the entire room goes quiet.
+      </p>
+      <div class="wed-options">
+        <div class="wed-option reveal">
+          <span class="wed-option__label">01</span>
+          <div>
+            <h4 class="wed-option__title">Cocktail Hour Aerial</h4>
+            <p>As guests arrive and find their seats, Emily performs an ambient aerial set suspended above the space —
+              setting an atmosphere of wonder and luxury from the moment they walk through the door. No announcement
+              needed. The performance announces itself.</p>
+          </div>
+        </div>
+        <div class="wed-option reveal reveal--delay-1">
+          <span class="wed-option__label">02</span>
+          <div>
+            <h4 class="wed-option__title">Reception Showpiece</h4>
+            <p>A fully choreographed performance during your reception. Custom music, custom costume, custom
+              choreography built entirely around your story as a couple. The photograph from this moment will be on your
+              wall.</p>
+          </div>
+        </div>
+        <div class="wed-option reveal reveal--delay-2">
+          <span class="wed-option__label">03</span>
+          <div>
+            <h4 class="wed-option__title">Ceremony Installation</h4>
+            <p>An ethereal aerial silks performance as a living, moving backdrop to your vows or processional. A piece
+              of moving art that transforms the visual architecture of your ceremony space.</p>
+          </div>
+        </div>
+      </div>
+      <p class="wed-note reveal"><em>Available for weddings throughout Central Florida, Tampa Bay, South Florida, and
+          destination events. Emily works directly with wedding planners and venue coordinators.</em></p>
+      <a href="#booking" class="btn btn--primary reveal">Inquire for Your Wedding Date <span
+          aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <!-- ===== PRIVATE EVENTS ===== -->
+  <section class="private" id="private" aria-labelledby="priv-heading">
+    <div class="container">
+      <div class="section-label section-label--light">PRIVATE EVENTS</div>
+      <h2 class="section-heading section-heading--light reveal" id="priv-heading">
+        Not Your Average<br /><em>Party Entertainment.</em>
+      </h2>
+      <p class="section-sub section-sub--light reveal">For the events where "good enough" was never an option.</p>
+      <div class="priv-grid">
+        <article class="priv-card reveal" aria-labelledby="priv-bach">
+          <div class="priv-card__icon" aria-hidden="true">✦</div>
+          <h3 class="priv-card__title" id="priv-bach">Luxury Bachelorette Experience</h3>
+          <p>An aerial or dance performance — plus an optional private movement session — that makes the bride's last
+            night as a single woman genuinely extraordinary. Not a night out. An experience.</p>
+        </article>
+        <article class="priv-card reveal reveal--delay-1" aria-labelledby="priv-bday">
+          <div class="priv-card__icon" aria-hidden="true">✦</div>
+          <h3 class="priv-card__title" id="priv-bday">Milestone Birthday Celebrations</h3>
+          <p>Thirty. Forty. Fifty. Some birthdays are events in themselves. A fully custom performance — themed,
+            choreographed, personal — that makes the guest of honor feel like the evening was built entirely for them.
+            Because it was.</p>
+        </article>
+        <article class="priv-card reveal reveal--delay-2" aria-labelledby="priv-vip">
+          <div class="priv-card__icon" aria-hidden="true">✦</div>
+          <h3 class="priv-card__title" id="priv-vip">Exclusive Dinner & VIP Experiences</h3>
+          <p>Ambient aerial during a private dinner. A full showpiece for a gathering of twenty people who have seen
+            everything. The entertainment choice for the host who understands that the experience is the gift.</p>
+        </article>
+      </div>
+      <p class="priv-note reveal"><em>Every private event booking includes a personal consultation with Emily to ensure
+          the performance is designed for this specific moment — and no other.</em></p>
+      <div class="section-cta">
+        <a href="#booking" class="btn btn--gold">Plan Your Private Experience <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about" aria-labelledby="about-heading">
+    <div class="about__visual" role="img"
+      aria-label="Emily Anne, professional aerial artist and performer in Orlando Florida"
+      style="background-image:url('assets/images/photo_1.png')"></div>
+    <div class="about__content">
+      <div class="section-label">ABOUT EMILY</div>
+      <h2 class="about__heading reveal" id="about-heading">
+        The Artist.<br />The Athlete.<br /><em>The Professional.</em>
+      </h2>
+      <p class="about__text reveal">
+        Emily Anne is a professional aerial artist, dancer, and live performer based in Orlando, Florida. She has
+        performed at corporate events, luxury weddings, private celebrations, and festivals throughout Central Florida —
+        bringing a level of technical precision and genuine artistry to every stage she steps onto.
+      </p>
+      <p class="about__text reveal">
+        Before performing professionally, Emily built her foundation as a certified personal trainer and group fitness
+        instructor — a background that gives her a level of body awareness, physical control, and movement intelligence
+        that separates her from performers who never trained this way. Her athleticism isn't decorative. It's
+        structural. It's the reason her aerial work is as clean as it is.
+      </p>
+      <p class="about__text reveal">
+        Emily doesn't outsource the details of her performances. She choreographs them. She designs the costume. She
+        selects the music. She coordinates with your venue. She shows up on time, performs at the level she promised,
+        and leaves your event better than she found it. Every time.
+      </p>
+      <div class="about__creds reveal" role="list" aria-label="Professional credentials">
+        <div class="about__cred" role="listitem">
+          <span class="about__cred-icon" aria-hidden="true">✦</span>
+          <span>Professional Aerial Artist</span>
+        </div>
+        <div class="about__cred" role="listitem">
+          <span class="about__cred-icon" aria-hidden="true">✦</span>
+          <span>Certified Personal Trainer</span>
+        </div>
+        <div class="about__cred" role="listitem">
+          <span class="about__cred-icon" aria-hidden="true">✦</span>
+          <span>Live Event Performer</span>
+        </div>
+      </div>
+      <blockquote class="about__quote reveal">
+        <p><em>"I don't do events. I do moments."</em></p>
+        <footer>— Emily Anne</footer>
+      </blockquote>
+      <a href="#booking" class="btn btn--dark reveal">Work with Emily <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section class="gallery" id="gallery" aria-labelledby="gallery-heading">
+    <div class="container">
+      <div class="section-label section-label--gold">THE PORTFOLIO</div>
+      <h2 class="section-heading section-heading--italic reveal" id="gallery-heading"><em>The Work.</em></h2>
+      <p class="section-sub section-sub--light reveal">Real performances. Real events. Real moments.</p>
+      <div class="gallery-grid" role="list" aria-label="Performance portfolio gallery">
+        <div class="gallery-item gallery-item--tall reveal" role="listitem">
+          <div class="gallery-item__inner" style="background-image:url('assets/images/photo_6.png')" role="img"
+            aria-label="Aerial silks performance over water"></div>
+        </div>
+        <div class="gallery-item reveal reveal--delay-1" role="listitem">
+          <div class="gallery-item__inner" style="background-image:url('assets/images/photo_5.png')" role="img"
+            aria-label="Aerial hoop performance outdoors"></div>
+        </div>
+        <div class="gallery-item reveal reveal--delay-2" role="listitem">
+          <div class="gallery-item__inner" style="background-image:url('assets/images/photo_2.png')" role="img"
+            aria-label="Dance jump performance"></div>
+        </div>
+        <div class="gallery-item gallery-item--wide reveal" role="listitem">
+          <div class="gallery-item__inner" style="background-image:url('assets/images/photo_7.png')" role="img"
+            aria-label="Commercial brand performance"></div>
+        </div>
+        <div class="gallery-item reveal reveal--delay-1" role="listitem">
+          <div class="gallery-item__inner" style="background-image:url('assets/images/photo_3.png')" role="img"
+            aria-label="Emily studio performance portrait"></div>
+        </div>
+        <div class="gallery-item reveal reveal--delay-2" role="listitem">
+          <div class="gallery-item__inner" style="background-image:url('assets/images/photo_4.png')" role="img"
+            aria-label="Emily studio standing portrait"></div>
+        </div>
+        <div class="gallery-item reveal" role="listitem">
+          <div class="gallery-item__inner" style="background-image:url('assets/images/photo_6.png')" role="img"
+            aria-label="Luxury aerial silks performance"></div>
+        </div>
+        <div class="gallery-item gallery-item--tall reveal reveal--delay-1" role="listitem">
+          <div class="gallery-item__inner" style="background-image:url('assets/images/photo_5.png')" role="img"
+            aria-label="Aerial hoop lyra performance"></div>
+        </div>
+        <div class="gallery-item reveal reveal--delay-2" role="listitem">
+          <div class="gallery-item__inner" style="background-image:url('assets/images/photo_6.png')" role="img"
+            aria-label="Ethereal aerial silks performance"></div>
+        </div>
+      </div>
+      <p class="gallery-caption reveal"><em>Available for booking throughout Orlando, Central Florida, and destination
+          events worldwide.</em></p>
+      <div class="section-cta">
+        <a href="#booking" class="btn btn--primary">Book a Performance <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials" id="testimonials" aria-labelledby="test-heading">
+    <div class="container">
+      <div class="section-label section-label--gold">CLIENT TESTIMONIALS</div>
+      <h2 class="section-heading section-heading--italic reveal" id="test-heading">
+        <em>What Happens After<br />the Performance.</em>
+      </h2>
+      <p class="section-sub section-sub--light reveal">In their words.</p>
+      <div class="test-track-wrapper" role="region" aria-label="Testimonials carousel">
+        <div class="test-track" id="testTrack">
+          <article class="test-card" aria-label="Corporate testimonial">
+            <div class="test-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="test-card__quote">
+              <p><em>"Emily's performance at our annual gala was the single most talked-about moment of the evening.
+                  Three hundred guests. Every one of them stopped what they were doing when she took the rig. We've
+                  already booked her for next year."</em></p>
+            </blockquote>
+            <footer class="test-card__footer">
+              <strong>Sarah M.</strong>
+              <span>Event Director · Corporate Gala, Orlando</span>
+            </footer>
+          </article>
+          <article class="test-card" aria-label="Wedding testimonial">
+            <div class="test-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="test-card__quote">
+              <p><em>"We wanted our wedding to have one moment that was completely ours. Emily gave us something our
+                  guests are still bringing up. The look on the room when she began — I will never forget it as long as
+                  I live."</em></p>
+            </blockquote>
+            <footer class="test-card__footer">
+              <strong>Jessica & Daniel R.</strong>
+              <span>Wedding Reception · The Alfond Inn, Winter Park</span>
+            </footer>
+          </article>
+          <article class="test-card" aria-label="Private event testimonial">
+            <div class="test-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="test-card__quote">
+              <p><em>"I planned my wife's fortieth birthday around Emily's performance. She choreographed everything to
+                  my wife's favorite song. My wife cried. Our guests were silent and then screaming. There is no version
+                  of that night that works without Emily in it."</em></p>
+            </blockquote>
+            <footer class="test-card__footer">
+              <strong>Marcus T.</strong>
+              <span>Private Birthday Celebration · Orlando, FL</span>
+            </footer>
+          </article>
+          <article class="test-card" aria-label="Wedding planner testimonial">
+            <div class="test-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="test-card__quote">
+              <p><em>"As a wedding planner, I need vendors who are as professional as they are talented. Emily is both.
+                  She communicated clearly, arrived early, coordinated with the venue without issues, and delivered a
+                  performance that made my clients' night."</em></p>
+            </blockquote>
+            <footer class="test-card__footer">
+              <strong>Lauren P.</strong>
+              <span>Wedding Planner · Blush Events, Orlando</span>
+            </footer>
+          </article>
+          <article class="test-card" aria-label="Brand activation testimonial">
+            <div class="test-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="test-card__quote">
+              <p><em>"We brought Emily in for a product launch activation. She stopped the room. The footage from her
+                  performance was the best-performing social content we produced all quarter. Our CMO asked for her
+                  contact within ten minutes of the performance ending."</em></p>
+            </blockquote>
+            <footer class="test-card__footer">
+              <strong>David K.</strong>
+              <span>Marketing Director · Brand Activation, Orlando</span>
+            </footer>
+          </article>
+        </div>
+        <div class="test-nav" role="group" aria-label="Testimonial navigation">
+          <button class="test-btn" id="testPrev" aria-label="Previous testimonial">←</button>
+          <div class="test-dots" id="testDots" role="tablist" aria-label="Testimonial indicators"></div>
+          <button class="test-btn" id="testNext" aria-label="Next testimonial">→</button>
+        </div>
+      </div>
+      <div class="test-stats reveal" role="list" aria-label="Performance statistics">
+        <div class="test-stat" role="listitem">
+          <span class="test-stat__number">5.0</span>
+          <span class="test-stat__label">Average Rating</span>
+        </div>
+        <div class="test-stat" role="listitem">
+          <span class="test-stat__number">100+</span>
+          <span class="test-stat__label">Events Performed</span>
+        </div>
+        <div class="test-stat" role="listitem">
+          <span class="test-stat__number">8+</span>
+          <span class="test-stat__label">Years Experience</span>
+        </div>
+        <div class="test-stat" role="listitem">
+          <span class="test-stat__number">3</span>
+          <span class="test-stat__label">Disciplines Mastered</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq" id="faq" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="section-label">FREQUENTLY ASKED</div>
+      <h2 class="faq__heading reveal" id="faq-heading">
+        Everything You Need<br /><em>Before You Book.</em>
+      </h2>
+      <div class="faq-list" role="list">
+        <div class="faq-item reveal" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a-1">
+            Where do you perform?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-a-1" hidden>
+            <p>Emily is based in Orlando, Florida, and performs throughout Central Florida, the Greater Orlando area,
+              Tampa Bay, and Miami. Destination events — both domestic and international — are welcome. Travel and
+              accommodation fees apply for events outside Central Florida and are discussed transparently at the time of
+              inquiry.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a-2">
+            What technical requirements does the venue need for aerial?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-a-2" hidden>
+            <p>Aerial performances require a structural rigging point — typically a beam, truss, or purpose-built aerial
+              point — rated for appropriate load-bearing capacity. Emily provides a complete technical rider with all
+              specifications immediately upon booking confirmation. The majority of professional venues in Orlando and
+              Central Florida are fully compatible. For venues that aren't, Emily's team works directly with your
+              coordinator to identify solutions before the event.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3">
+            How far in advance should I book?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-a-3" hidden>
+            <p>Emily's calendar fills quickly — particularly for Friday and Saturday dates between October and April.
+              For corporate events and private celebrations, a minimum of 6–8 weeks' notice is recommended. For
+              weddings, 3–6 months is ideal. That said, last-minute availability occasionally exists — reach out and
+              ask.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a-4">
+            Can the performance be customized to our event theme?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-a-4" hidden>
+            <p>Every performance Emily delivers is custom-built for that specific event. Costume selection, music,
+              choreography, entry, duration, and performance style are all designed around your theme, aesthetic, and
+              vision. A private consultation call — included with every booking — is where this process begins.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a-5">
+            What is included in the booking price?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-a-5" hidden>
+            <p>Every booking includes: a personal consultation call with Emily, fully custom choreography and costume
+              coordination, complete technical coordination with your venue team, the live performance, and follow-up
+              communication. Pricing varies based on event type, performance duration, number of disciplines, and travel
+              requirements. Contact us for a personalized quote — Emily responds to every inquiry personally.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a-6">
+            Do you carry liability insurance and certifications?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-a-6" hidden>
+            <p>Yes. Emily carries professional performer liability insurance and holds all relevant certifications for
+              her disciplines. Full documentation is available upon request and is routinely provided for corporate
+              clients and venue contracts.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal" role="listitem">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a-7">
+            What is the booking process?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-a-7" hidden>
+            <p>Submit the booking form below with your event details. Emily reviews every inquiry personally and
+              responds within 24 hours with availability confirmation and next steps. A deposit secures your date on the
+              calendar. The remainder is due prior to the event. Every booking includes a signed contract protecting
+              both parties.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BOOKING ===== -->
+  <section class="booking" id="booking" aria-labelledby="booking-heading">
+    <div class="booking__bg" aria-hidden="true" style="background-image:url('assets/images/photo_3.png')">
+      <div class="booking__overlay" aria-hidden="true"></div>
+    </div>
+    <div class="booking__content">
+      <div class="section-label section-label--gold">BOOKING INQUIRIES</div>
+      <h2 class="booking__heading reveal" id="booking-heading">
+        Let's Create Something<br /><em>Your Guests Will Never Forget.</em>
+      </h2>
+      <p class="booking__sub reveal">Tell Emily about your event. She'll be in touch within 24 hours.</p>
+      <form class="booking-form reveal" id="bookingForm" novalidate aria-label="Booking inquiry form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" placeholder="Full name" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number <span aria-hidden="true">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="Best number to reach you" autocomplete="tel" />
+          </div>
+          <div class="form-group">
+            <label for="event-type">Type of Event <span aria-hidden="true">*</span></label>
+            <select id="event-type" name="event-type" required>
+              <option value="" disabled selected>Select event type</option>
+              <option>Corporate Gala</option>
+              <option>Product Launch / Brand Activation</option>
+              <option>Grand Opening</option>
+              <option>Wedding</option>
+              <option>Private Celebration</option>
+              <option>Bachelorette Experience</option>
+              <option>Festival / Public Event</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="event-date">Event Date <span aria-hidden="true">*</span></label>
+            <input type="date" id="event-date" name="event-date" required />
+          </div>
+          <div class="form-group">
+            <label for="venue">Venue / Location <span aria-hidden="true">*</span></label>
+            <input type="text" id="venue" name="venue" placeholder="Venue name and city" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="guests">Estimated Guest Count</label>
+            <select id="guests" name="guests">
+              <option value="" disabled selected>Approximate guest count</option>
+              <option>Under 50</option>
+              <option>50 – 100</option>
+              <option>100 – 200</option>
+              <option>200 – 500</option>
+              <option>500+</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="referral">How did you hear about Emily?</label>
+            <select id="referral" name="referral">
+              <option value="" disabled selected>Select an option</option>
+              <option>Instagram</option>
+              <option>Google Search</option>
+              <option>Wedding Planner</option>
+              <option>Event Planner</option>
+              <option>Word of Mouth</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group form-group--full">
+          <label for="vision">Tell Emily about your vision <span aria-hidden="true">*</span></label>
+          <textarea id="vision" name="vision" rows="5"
+            placeholder="Describe your event, your aesthetic, the moment you want to create..." required></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn btn--primary btn--large">
+            Send My Booking Request <span aria-hidden="true">→</span>
+          </button>
+          <p class="form-note">Emily personally reviews every inquiry. You'll hear back within 24 hours.<br />Your
+            information is never shared or sold.</p>
+        </div>
+      </form>
+      <div class="form-success" id="formSuccess" aria-live="polite" hidden>
+        <div class="form-success__inner">
+          <span class="form-success__icon" aria-hidden="true">✦</span>
+          <h3>Thank you for reaching out.</h3>
+          <p>Emily has received your inquiry and will be in touch within 24 hours.</p>
+          <p>In the meantime, follow along on Instagram for behind-the-scenes content and upcoming performances.</p>
+          <a href="https://instagram.com/manifestfitnessemily" target="_blank" rel="noopener noreferrer"
+            class="btn btn--gold">@manifestfitnessemily</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__name">Emily Anne</div>
+        <div class="footer__tagline"><em>Aerial · Dance · Live Performance</em></div>
+        <p class="footer__location">Orlando, Florida<br />Available for Events Throughout Florida and Worldwide</p>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">CONTACT</h4>
+        <ul class="footer__links" role="list">
+          <li><a href="mailto:hello@emilyanne.com">hello@emilyanne.com</a></li>
+          <li><a href="tel:+16893226891">(689) 322-6891</a></li>
+          <li><a href="https://instagram.com/manifestfitnessemily" target="_blank"
+              rel="noopener noreferrer">@manifestfitnessemily</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">PERFORMANCES</h4>
+        <ul class="footer__links" role="list">
+          <li><a href="#aerial">Aerial Hoop & Silks</a></li>
+          <li><a href="#dance-perf">Dance Performance</a></li>
+          <li><a href="#corporate">Corporate Events</a></li>
+          <li><a href="#weddings">Weddings</a></li>
+          <li><a href="#private">Private Events</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">INFORMATION</h4>
+        <ul class="footer__links" role="list">
+          <li><a href="#about">About Emily</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#booking">Press Kit</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__cta">
+      <em>Ready to book?</em>
+      <a href="#booking" class="footer__cta-link">Contact Emily <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 Emily Anne · All Rights Reserved · Orlando, Florida</p>
+    </div>
+  </footer>
+
+  <!-- ===== INSTAGRAM FLOATING BUTTON ===== -->
+  <a href="https://instagram.com/manifestfitnessemily" target="_blank" rel="noopener noreferrer" class="ig-float"
+    aria-label="Follow Emily Anne on Instagram">
+    <svg class="ig-float__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+      aria-hidden="true">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+    </svg>
+    <span class="ig-float__label">Follow</span>
+  </a>
+
+  <!-- ===== BOOK NOW STICKY ===== -->
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <a href="#booking" class="btn btn--primary">Book Now <span aria-hidden="true">→</span></a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
