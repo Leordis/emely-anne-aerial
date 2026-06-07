@@ -421,6 +421,12 @@ ul { list-style: none; }
   height: 100%;
   object-fit: cover;
   object-position: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.hero__video.is-loaded {
+  opacity: 1;
 }
 
 .hero__image-fallback {

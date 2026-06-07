@@ -470,6 +470,18 @@ function initHeroVideo() {
     return;
   }
 
+  // Smoothly fade in video once it actually starts playing to avoid visual flashing
+  const handleVideoPlaying = () => {
+    video.classList.add('is-loaded');
+  };
+
+  if (video.readyState >= 3 || (!video.paused && !video.seeking)) {
+    handleVideoPlaying();
+  } else {
+    video.addEventListener('playing', handleVideoPlaying, { once: true });
+    video.addEventListener('loadeddata', handleVideoPlaying, { once: true });
+  }
+
   // Handle video error gracefully (only hide if all sources failed)
   video.addEventListener('error', () => {
     if (video.networkState === HTMLMediaElement.NETWORK_NO_SOURCE) {
